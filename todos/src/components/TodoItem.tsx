@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Input } from 'ui-kit';
 import { Todo } from '../types/todo';
 import styles from './TodoItem.module.css';
@@ -22,15 +22,45 @@ export const TodoItem: React.FC<TodoItemProps> = ({
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(todo.text);
 
-  const handleSave = () => {
-    if (editText.trim() && editText !== todo.text) {
-      onUpdate(todo.id, editText);
+  // 同步 todo.text 的变化到 editText
+  useEffect(() => {
+    if (!isEditing) {
+      setEditText(todo.text);
     }
+  }, [todo.text, isEditing]);
+
+  const handleSave = (e?: React.MouseEvent) => {
+    // 阻止事件冒泡
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    const trimmedText = editText.trim();
+
+    // 如果文本为空，恢复原始文本
+    if (!trimmedText) {
+      setEditText(todo.text);
+      setIsEditing(false);
+      return;
+    }
+
+    // 如果文本有变化，更新它
+    if (trimmedText !== todo.text) {
+      onUpdate(todo.id, trimmedText);
+    }
+
+    // 退出编辑模式
     setIsEditing(false);
-    setEditText(todo.text);
   };
 
-  const handleCancel = () => {
+  const handleCancel = (e?: React.MouseEvent) => {
+    // 阻止事件冒泡
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
     setIsEditing(false);
     setEditText(todo.text);
   };
@@ -57,9 +87,13 @@ export const TodoItem: React.FC<TodoItemProps> = ({
       <div className={styles.content}>
         <button
           className={styles.checkbox}
-          onClick={() => onToggle(todo.id)}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onToggle(todo.id);
+          }}
           aria-label={
-            todo.completed ? 'Mark as incomplete' : 'Mark as complete'
+            todo.completed ? '标记为未完成' : '标记为已完成'
           }
         >
           {todo.completed && <span className={styles.checkmark}>✓</span>}
@@ -71,8 +105,8 @@ export const TodoItem: React.FC<TodoItemProps> = ({
               value={editText}
               onChange={e => setEditText(e.target.value)}
               onKeyDown={handleKeyDown}
-              onBlur={handleSave}
               autoFocus
+              size="sm"
               className={styles.editInput}
             />
           </div>
@@ -83,9 +117,9 @@ export const TodoItem: React.FC<TodoItemProps> = ({
           >
             <span className={styles.text}>{todo.text}</span>
             <span className={styles.date}>
-              Created: {formatDate(todo.createdAt)}
+              创建时间: {formatDate(todo.createdAt)}
               {todo.updatedAt.getTime() !== todo.createdAt.getTime() && (
-                <> • Updated: {formatDate(todo.updatedAt)}</>
+                <> • 更新时间: {formatDate(todo.updatedAt)}</>
               )}
             </span>
           </div>
@@ -96,42 +130,49 @@ export const TodoItem: React.FC<TodoItemProps> = ({
         {isEditing ? (
           <>
             <Button
-              onClick={handleSave}
-              disabled={!editText.trim()}
+              onClick={(e) => handleSave(e)}
               variant="primary"
               size="sm"
               className={styles.button}
             >
-              Save
+              保存
             </Button>
             <Button
-              onClick={handleCancel}
+              onClick={(e) => handleCancel(e)}
               variant="secondary"
               size="sm"
               className={styles.button}
             >
-              Cancel
+              取消
             </Button>
           </>
         ) : (
           <>
             <Button
-              onClick={() => setIsEditing(true)}
-              aria-label="Edit todo"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsEditing(true);
+              }}
+              aria-label="编辑待办事项"
               variant="secondary"
               size="sm"
               className={styles.button}
             >
-              Edit
+              编辑
             </Button>
             <Button
-              onClick={() => onDelete(todo.id)}
-              aria-label="Delete todo"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onDelete(todo.id);
+              }}
+              aria-label="删除待办事项"
               variant="danger"
               size="sm"
               className={styles.button}
             >
-              Delete
+              删除
             </Button>
           </>
         )}

@@ -23,7 +23,7 @@ type FilterType = 'all' | 'active' | 'completed';
  * Main TodoList component with full CRUD functionality
  */
 export const TodoList: React.FC<TodoListProps> = ({
-  title = 'Todo List',
+  title = '待办事项列表',
   showStats = true,
 }) => {
   const {
@@ -59,7 +59,7 @@ export const TodoList: React.FC<TodoListProps> = ({
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.subtitle}>
-          Manage your tasks with persistent storage
+          使用持久化存储管理您的任务
         </p>
       </div>
 
@@ -75,23 +75,26 @@ export const TodoList: React.FC<TodoListProps> = ({
                 <Button
                   variant={filter === 'all' ? 'primary' : 'secondary'}
                   onClick={() => setFilter('all')}
+                  size="sm"
                   className={styles.filterButton}
                 >
-                  All ({stats.total})
+                  全部 ({stats.total})
                 </Button>
                 <Button
                   variant={filter === 'active' ? 'primary' : 'secondary'}
                   onClick={() => setFilter('active')}
+                  size="sm"
                   className={styles.filterButton}
                 >
-                  Active ({stats.pending})
+                  待完成 ({stats.pending})
                 </Button>
                 <Button
                   variant={filter === 'completed' ? 'primary' : 'secondary'}
                   onClick={() => setFilter('completed')}
+                  size="sm"
                   className={styles.filterButton}
                 >
-                  Completed ({stats.completed})
+                  已完成 ({stats.completed})
                 </Button>
               </div>
 
@@ -100,17 +103,19 @@ export const TodoList: React.FC<TodoListProps> = ({
                   <Button
                     variant="secondary"
                     onClick={clearCompleted}
+                    size="sm"
                     className={styles.actionButton}
                   >
-                    Clear Completed
+                    清除已完成
                   </Button>
                 )}
                 <Button
                   variant="danger"
                   onClick={clearAll}
+                  size="sm"
                   className={styles.actionButton}
                 >
-                  Clear All
+                  清除全部
                 </Button>
               </div>
             </div>
@@ -128,9 +133,9 @@ export const TodoList: React.FC<TodoListProps> = ({
                 ))
               ) : (
                 <div className={styles.empty}>
-                  {filter === 'all' && 'No todos yet. Add one above!'}
-                  {filter === 'active' && 'No active todos. Great job!'}
-                  {filter === 'completed' && 'No completed todos yet.'}
+                  {filter === 'all' && '暂无待办事项，请在上方添加！'}
+                  {filter === 'active' && '没有待完成的任务，干得好！'}
+                  {filter === 'completed' && '暂无已完成的任务。'}
                 </div>
               )}
             </div>
@@ -139,10 +144,10 @@ export const TodoList: React.FC<TodoListProps> = ({
 
         {!hasTodos && (
           <div className={styles.welcome}>
-            <h3>Welcome to your Todo List!</h3>
-            <p>Add your first todo above to get started.</p>
+            <h3>欢迎使用待办事项列表！</h3>
+            <p>在上方添加您的第一个待办事项开始使用。</p>
             <p>
-              💡 <strong>Tip:</strong> Double-click any todo to edit it.
+              💡 <strong>提示：</strong> 双击任何待办事项可以编辑它。
             </p>
           </div>
         )}
@@ -150,7 +155,7 @@ export const TodoList: React.FC<TodoListProps> = ({
 
       <div className={styles.footer}>
         <p>
-          💾 All data is automatically saved to your browser&apos;s local storage
+          💾 所有数据自动保存到浏览器本地存储
         </p>
       </div>
     </div>

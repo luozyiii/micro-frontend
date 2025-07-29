@@ -5,7 +5,7 @@
 .title {
   margin: 0;
   font-size: 1.25rem;
-  color: #495057;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -30,7 +30,7 @@
 
 .label {
   font-size: 0.875rem;
-  color: #6c757d;
+  color: #b3b3b3;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -43,7 +43,7 @@
 
 .progressLabel {
   font-size: 0.875rem;
-  color: #495057;
+  color: #cddff1;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }

@@ -17,34 +17,34 @@ export const TodoStats: React.FC<TodoStatsProps> = ({ stats }) => {
     <Card
       variant="elevated"
       padding="lg"
-      header={<h3 className={styles.title}>Todo Statistics</h3>}
+      header={<h3 className={styles.title}>任务统计</h3>}
       className={styles.statsCard}
     >
       <div className={styles.grid}>
         <div className={styles.stat}>
           <div className={styles.value}>{total}</div>
-          <div className={styles.label}>Total</div>
+          <div className={styles.label}>总计</div>
         </div>
 
         <div className={styles.stat}>
           <div className={styles.value}>{completed}</div>
-          <div className={styles.label}>Completed</div>
+          <div className={styles.label}>已完成</div>
         </div>
 
         <div className={styles.stat}>
           <div className={styles.value}>{pending}</div>
-          <div className={styles.label}>Pending</div>
+          <div className={styles.label}>待完成</div>
         </div>
 
         <div className={styles.stat}>
           <div className={styles.value}>{completionRate.toFixed(0)}%</div>
-          <div className={styles.label}>Progress</div>
+          <div className={styles.label}>完成率</div>
         </div>
       </div>
 
       {total > 0 && (
         <div className={styles.progressBar}>
-          <div className={styles.progressLabel}>Completion Progress</div>
+          <div className={styles.progressLabel}>完成进度</div>
           <div className={styles.progressTrack}>
             <div
               className={styles.progressFill}

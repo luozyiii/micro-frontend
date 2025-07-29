@@ -12,7 +12,7 @@ export interface TodoFormProps {
  */
 export const TodoForm: React.FC<TodoFormProps> = ({
   onSubmit,
-  placeholder = 'What needs to be done?',
+  placeholder = '需要做什么？',
 }) => {
   const [text, setText] = useState('');
 
@@ -38,15 +38,17 @@ export const TodoForm: React.FC<TodoFormProps> = ({
           onChange={e => setText(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
+          size="sm"
           className={styles.input}
         />
         <Button
           type="submit"
           disabled={!text.trim()}
           variant="primary"
+          size="sm"
           className={styles.button}
         >
-          Add Todo
+          添加任务
         </Button>
       </div>
     </form>

@@ -23,7 +23,7 @@ export interface CounterProps {
  */
 export const Counter: React.FC<CounterProps> = ({
   initialValue = 0,
-  title = 'Counter',
+  title = '计数器',
   showReset = true,
 }) => {
   const { count, increment, decrement, reset } = useCounter(initialValue);
@@ -42,7 +42,7 @@ export const Counter: React.FC<CounterProps> = ({
           onClick={decrement}
           variant="danger"
           className={styles.button}
-          aria-label="Decrease counter"
+          aria-label="减少计数"
         >
           -1
         </Button>
@@ -51,7 +51,7 @@ export const Counter: React.FC<CounterProps> = ({
           onClick={increment}
           variant="primary"
           className={styles.button}
-          aria-label="Increase counter"
+          aria-label="增加计数"
         >
           +1
         </Button>
@@ -61,19 +61,16 @@ export const Counter: React.FC<CounterProps> = ({
             onClick={reset}
             variant="secondary"
             className={styles.button}
-            aria-label="Reset counter"
+            aria-label="重置计数"
           >
-            Reset
+            重置
           </Button>
         )}
       </div>
 
       <div className={styles.info}>
-        <p className={styles.description}>
-          Current value: <strong>{count}</strong>
-        </p>
         <p className={styles.note}>
-          💾 Value is automatically saved to localStorage
+          💾 数值自动保存到本地存储
         </p>
       </div>
     </div>

@@ -6,8 +6,8 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Counter Application</h1>
-        <p>A simple counter with persistent state</p>
+        <h1>计数器应用</h1>
+        <p>带持久化状态的简单计数器</p>
       </header>
       <main className="app-main">
         <Counter />

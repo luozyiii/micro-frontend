@@ -13,7 +13,7 @@
   cursor: pointer;
   user-select: none;
   border: 2px solid transparent;
-  border-radius: var(--border-radius-base);
+  border-radius: var(--border-radius-sm);
   transition: all var(--transition-base);
 }
 
@@ -65,18 +65,18 @@
 
 .button--secondary {
   color: var(--color-text-primary);
-  background-color: var(--color-bg-tertiary);
-  border-color: var(--color-border-primary);
+  background-color: #525252;
+  border-color: #737373;
 }
 
 .button--secondary:hover:not(:disabled) {
-  background-color: var(--color-dark-500);
-  border-color: var(--color-border-light);
+  background-color: #737373;
+  border-color: #a3a3a3;
 }
 
 .button--secondary:active:not(:disabled) {
-  background-color: var(--color-bg-tertiary);
-  border-color: var(--color-border-primary);
+  background-color: #404040;
+  border-color: #525252;
 }
 
 .button--success {

@@ -13,15 +13,15 @@ export interface NavigationProps {
  * Navigation component with responsive design
  */
 export const Navigation: React.FC<NavigationProps> = ({
-  brand = 'Micro Frontend Demo',
+  brand = '微前端演示平台',
 }) => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Home', icon: '🏠' },
-    { path: '/counter', label: 'Counter', icon: '🔢' },
-    { path: '/todos', label: 'Todos', icon: '✅' },
+    { path: '/', label: '首页', icon: '🏠' },
+    { path: '/counter', label: '计数器', icon: '🔢' },
+    { path: '/todos', label: '待办事项', icon: '✅' },
   ];
 
   const isActive = (path: string) => {

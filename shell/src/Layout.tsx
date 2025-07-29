@@ -16,7 +16,7 @@ export const Layout: React.FC = () => {
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <p>
-            Built with ❤️ using{' '}
+            使用 ❤️ 构建，基于{' '}
             <a
               href="https://rsbuild.dev"
               target="_blank"
@@ -36,7 +36,7 @@ export const Layout: React.FC = () => {
             </a>
           </p>
           <p className={styles.copyright}>
-            © 2024 Micro Frontend Demo. All rights reserved.
+            © 2024 微前端演示平台. 保留所有权利.
           </p>
         </div>
       </footer>
