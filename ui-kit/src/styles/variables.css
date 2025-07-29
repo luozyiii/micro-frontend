@@ -1,69 +1,75 @@
-/* Dark Atmospheric Design System Variables */
+/* Orange Vibrant Design System Variables */
 :root {
-  /* Primary Brand Colors - Electric Blue Accent */
-  --color-primary: #00d4ff;
-  --color-primary-hover: #00b8e6;
-  --color-primary-active: #009cc7;
-  --color-primary-light: rgba(0, 212, 255, 0.1);
-  --color-primary-glow: rgba(0, 212, 255, 0.3);
+  /* Primary Brand Colors - Vibrant Orange */
+  --color-primary: #f77f00;
+  --color-primary-hover: #e56b00;
+  --color-primary-active: #d35400;
+  --color-primary-light: rgba(247, 127, 0, 0.1);
+  --color-primary-glow: rgba(247, 127, 0, 0.4);
 
-  /* Secondary Colors - Purple Accent */
-  --color-secondary: #8b5cf6;
-  --color-secondary-hover: #7c3aed;
-  --color-secondary-active: #6d28d9;
-  --color-secondary-light: rgba(139, 92, 246, 0.1);
+  /* Secondary Colors - Warm Amber */
+  --color-secondary: #ff9500;
+  --color-secondary-hover: #e6850e;
+  --color-secondary-active: #cc7700;
+  --color-secondary-light: rgba(255, 149, 0, 0.1);
+
+  /* Accent Colors - Deep Orange */
+  --color-accent: #ff6b35;
+  --color-accent-hover: #ff5722;
+  --color-accent-active: #e64a19;
+  --color-accent-light: rgba(255, 107, 53, 0.1);
 
   /* Status Colors */
-  --color-success: #10b981;
-  --color-success-hover: #059669;
-  --color-success-active: #047857;
-  --color-success-light: rgba(16, 185, 129, 0.1);
+  --color-success: #4caf50;
+  --color-success-hover: #45a049;
+  --color-success-active: #388e3c;
+  --color-success-light: rgba(76, 175, 80, 0.1);
 
-  --color-danger: #ef4444;
-  --color-danger-hover: #dc2626;
-  --color-danger-active: #b91c1c;
-  --color-danger-light: rgba(239, 68, 68, 0.1);
+  --color-danger: #f44336;
+  --color-danger-hover: #e53935;
+  --color-danger-active: #d32f2f;
+  --color-danger-light: rgba(244, 67, 54, 0.1);
 
-  --color-warning: #f59e0b;
-  --color-warning-hover: #d97706;
-  --color-warning-active: #b45309;
-  --color-warning-light: rgba(245, 158, 11, 0.1);
+  --color-warning: #ff9800;
+  --color-warning-hover: #f57c00;
+  --color-warning-active: #ef6c00;
+  --color-warning-light: rgba(255, 152, 0, 0.1);
 
-  --color-info: #06b6d4;
-  --color-info-hover: #0891b2;
-  --color-info-active: #0e7490;
-  --color-info-light: rgba(6, 182, 212, 0.1);
+  --color-info: #2196f3;
+  --color-info-hover: #1976d2;
+  --color-info-active: #1565c0;
+  --color-info-light: rgba(33, 150, 243, 0.1);
 
-  /* Dark Theme Base Colors */
-  --color-dark-900: #0a0a0a;
-  --color-dark-800: #1a1a1a;
-  --color-dark-700: #2a2a2a;
-  --color-dark-600: #3a3a3a;
-  --color-dark-500: #4a4a4a;
-  --color-dark-400: #6a6a6a;
-  --color-dark-300: #8a8a8a;
-  --color-dark-200: #aaaaaa;
-  --color-dark-100: #cccccc;
+  /* Flat Design Base Colors */
+  --color-dark-900: #1a1a1a;
+  --color-dark-800: #2d2d2d;
+  --color-dark-700: #404040;
+  --color-dark-600: #525252;
+  --color-dark-500: #737373;
+  --color-dark-400: #a3a3a3;
+  --color-dark-300: #d4d4d4;
+  --color-dark-200: #e5e5e5;
+  --color-dark-100: #f5f5f5;
 
   /* Text Colors */
   --color-text-primary: #ffffff;
-  --color-text-secondary: #cccccc;
-  --color-text-muted: #8a8a8a;
-  --color-text-inverse: #0a0a0a;
+  --color-text-secondary: #d4d4d4;
+  --color-text-muted: #a3a3a3;
+  --color-text-inverse: #1a1a1a;
   --color-text-accent: var(--color-primary);
 
   /* Background Colors */
-  --color-bg-primary: var(--color-dark-900);
-  --color-bg-secondary: var(--color-dark-800);
-  --color-bg-tertiary: var(--color-dark-700);
-  --color-bg-elevated: var(--color-dark-800);
-  --color-bg-overlay: rgba(0, 0, 0, 0.8);
+  --color-bg-primary: #1a1a1a;
+  --color-bg-secondary: #2d2d2d;
+  --color-bg-tertiary: #404040;
+  --color-bg-card: #2d2d2d;
+  --color-bg-input: #404040;
 
   /* Border Colors */
-  --color-border-primary: var(--color-dark-600);
-  --color-border-secondary: var(--color-dark-700);
+  --color-border-primary: #525252;
+  --color-border-secondary: #404040;
   --color-border-focus: var(--color-primary);
-  --color-border-accent: var(--color-primary);
+  --color-border-light: #737373;
 
   /* Spacing System */
   --spacing-xs: 0.25rem; /* 4px */
@@ -119,35 +125,17 @@
   --border-radius-2xl: 2rem; /* 32px */
   --border-radius-full: 9999px;
 
-  /* Dark Theme Shadows with Glow Effects */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  --shadow-md:
-    0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg:
-    0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-xl:
-    0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
-  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  /* Minimal Flat Shadows */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-focus: 0 0 0 3px rgba(247, 127, 0, 0.2);
 
-  /* Glow Effects */
-  --glow-primary: 0 0 20px var(--color-primary-glow);
-  --glow-secondary: 0 0 20px rgba(139, 92, 246, 0.3);
-  --glow-success: 0 0 20px rgba(16, 185, 129, 0.3);
-  --glow-danger: 0 0 20px rgba(239, 68, 68, 0.3);
-  --glow-soft: 0 0 40px rgba(0, 212, 255, 0.1);
-
-  /* Enhanced Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-  /* Backdrop Filters */
-  --backdrop-blur-sm: blur(4px);
-  --backdrop-blur-base: blur(8px);
-  --backdrop-blur-lg: blur(16px);
+  /* Simple Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
 
   /* Z-index Layers */
   --z-base: 0;
@@ -160,22 +148,9 @@
   --z-tooltip: 1070;
   --z-max: 9999;
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-secondary) 100%
-  );
-  --gradient-dark: linear-gradient(
-    135deg,
-    var(--color-dark-800) 0%,
-    var(--color-dark-900) 100%
-  );
-  --gradient-glow: radial-gradient(
-    circle at center,
-    var(--color-primary-glow) 0%,
-    transparent 70%
-  );
+  /* Minimal Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-text: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
 
   /* Animation Curves */
   --ease-in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,36 +1,50 @@
 .form {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
 }
 
 .inputGroup {
   display: flex;
   gap: 1rem;
-  align-items: flex-end;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
 }
 
 .input {
   flex: 1;
-  padding: 0.75rem 1rem;
-  border: 1px solid #dee2e6;
-  border-radius: 6px;
+  min-width: 0;
+  padding: 0.875rem 1.25rem;
+  background-color: #404040;
+  border: 2px solid #525252;
+  border-radius: 8px;
   font-size: 1rem;
+  color: #ffffff;
   transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  color: #a3a3a3;
 }
 
 .input:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  border-color: #f77f00;
+  box-shadow: 0 0 0 3px rgba(247, 127, 0, 0.2);
+}
+
+.input:hover:not(:focus) {
+  border-color: #737373;
 }
 
 .button {
   flex-shrink: 0;
   min-width: 120px;
-  padding: 0.75rem 1.5rem;
-  background-color: #007bff;
+  padding: 0.875rem 1.75rem;
+  background-color: #f77f00;
   color: white;
-  border: none;
-  border-radius: 6px;
+  border: 2px solid #f77f00;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -38,26 +52,72 @@
 }
 
 .button:hover:not(:disabled) {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #e56b00;
+  border-color: #e56b00;
+  transform: translateY(-1px);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .button:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* Responsive design */
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .inputGroup {
+    gap: 0.75rem;
+  }
+
+  .input {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .button {
+    min-width: 120px;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 480px) {
   .inputGroup {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.75rem;
+    gap: 1rem;
+  }
+
+  .input {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
   }
 
   .button {
     width: 100%;
     min-width: auto;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* 超大屏幕优化 */
+@media (min-width: 1200px) {
+  .inputGroup {
+    gap: 1.5rem;
+  }
+
+  .input {
+    font-size: 1.2rem;
+    padding: 1.25rem 2rem;
+  }
+
+  .button {
+    min-width: 160px;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.2rem;
   }
 }

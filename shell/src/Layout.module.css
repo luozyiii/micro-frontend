@@ -2,31 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  position: relative;
-  overflow-x: hidden;
-}
-
-.layout::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(
-      ellipse at top,
-      rgba(0, 212, 255, 0.03) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      ellipse at bottom right,
-      rgba(139, 92, 246, 0.03) 0%,
-      transparent 50%
-    );
-  pointer-events: none;
-  z-index: -1;
+  background-color: #1a1a1a;
 }
 
 .main {
@@ -40,22 +16,11 @@
 }
 
 .footer {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  background-color: #2d2d2d;
   color: #ffffff;
-  padding: 3rem 1rem 2rem;
+  padding: 2rem 1rem;
   margin-top: auto;
-  border-top: 1px solid #3a3a3a;
-  position: relative;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+  border-top: 1px solid #404040;
 }
 
 .footerContent {

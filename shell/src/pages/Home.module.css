@@ -5,32 +5,12 @@
 
 .hero {
   text-align: center;
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-  border-radius: 24px;
+  padding: 4rem 2rem;
+  background-color: #2d2d2d;
+  border-radius: 12px;
   color: white;
   margin-bottom: 4rem;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #3a3a3a;
-  box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.8),
-    0 0 40px rgba(0, 212, 255, 0.1);
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 212, 255, 0.1) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
+  border: 1px solid #404040;
 }
 
 .heroContent {
@@ -45,7 +25,7 @@
   font-weight: 900;
   margin: 0 0 1.5rem 0;
   line-height: 1.1;
-  background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #f77f00 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -116,14 +96,14 @@
 }
 
 .buttonPrimary {
-  background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
-  border-color: #00d4ff;
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+  background: linear-gradient(135deg, #f77f00 0%, #ff6b35 100%);
+  border-color: #f77f00;
+  box-shadow: 0 10px 25px rgba(247, 127, 0, 0.4);
 }
 
 .buttonPrimary:hover {
-  background: linear-gradient(135deg, #00b8e6 0%, #7c3aed 100%);
-  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+  background: linear-gradient(135deg, #e56b00 0%, #ff5722 100%);
+  box-shadow: 0 15px 35px rgba(247, 127, 0, 0.6);
 }
 
 .buttonSecondary {
@@ -144,7 +124,7 @@
   text-align: center;
   margin: 0 0 3rem 0;
   color: #ffffff;
-  background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #f77f00 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -163,47 +143,25 @@
 
 .appCard {
   text-align: center;
-  transition: all 0.3s ease;
-  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border: 1px solid #3a3a3a;
-  position: relative;
-  overflow: hidden;
-}
-
-.appCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.2s ease;
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #404040;
 }
 
 .appCard:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.6),
-    0 0 30px rgba(0, 212, 255, 0.1);
-}
-
-.appCard:hover::before {
-  opacity: 1;
+  border-color: #f77f00;
 }
 
 .appIcon {
   font-size: 5rem;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #f77f00 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 4px 8px rgba(0, 212, 255, 0.3));
+  filter: drop-shadow(0 4px 8px rgba(247, 127, 0, 0.4));
 }
 
 .appName {
