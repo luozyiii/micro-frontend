@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Card } from 'ui-kit';
 import styles from './NotFound.module.css';
 
 /**
@@ -9,7 +8,7 @@ import styles from './NotFound.module.css';
 export const NotFound: React.FC = () => {
   return (
     <div className={styles.container}>
-      <Card className={styles.card} padding="lg">
+      <div className={styles.card}>
         <div className={styles.icon}>🔍</div>
         <h1 className={styles.title}>404 - Page Not Found</h1>
         <p className={styles.message}>
@@ -19,15 +18,15 @@ export const NotFound: React.FC = () => {
           Here are some helpful links to get you back on track:
         </p>
         <div className={styles.actions}>
-          <Button variant="primary" size="lg" as={Link} to="/">
+          <Link to="/" className={`${styles.button} ${styles.buttonPrimary}`}>
             Go Home
-          </Button>
-          <Button variant="secondary" size="lg" as={Link} to="/counter">
+          </Link>
+          <Link to="/counter" className={`${styles.button} ${styles.buttonSecondary}`}>
             Try Counter
-          </Button>
-          <Button variant="secondary" size="lg" as={Link} to="/todos">
+          </Link>
+          <Link to="/todos" className={`${styles.button} ${styles.buttonSecondary}`}>
             Try Todos
-          </Button>
+          </Link>
         </div>
         <div className={styles.help}>
           <p>
@@ -38,7 +37,7 @@ export const NotFound: React.FC = () => {
             .
           </p>
         </div>
-      </Card>
+      </div>
     </div>
   );
 };

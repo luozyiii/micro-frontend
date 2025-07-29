@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from 'ui-kit';
 import styles from './Navigation.module.css';
 
 export interface NavigationProps {
@@ -63,9 +62,7 @@ export const Navigation: React.FC<NavigationProps> = ({
         </div>
 
         {/* Mobile Menu Button */}
-        <Button
-          variant="light"
-          size="sm"
+        <button
           onClick={toggleMobileMenu}
           className={styles.mobileMenuButton}
           aria-label="Toggle mobile menu"
@@ -75,7 +72,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             <span></span>
             <span></span>
           </span>
-        </Button>
+        </button>
       </div>
 
       {/* Mobile Navigation */}

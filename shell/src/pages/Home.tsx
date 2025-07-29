@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Card } from 'ui-kit';
 import styles from './Home.module.css';
 
 /**
@@ -68,12 +67,12 @@ export const Home: React.FC = () => {
             Explore the power of Module Federation with React, TypeScript, and Rsbuild
           </p>
           <div className={styles.heroActions}>
-            <Button variant="primary" size="lg" as={Link} to="/counter">
+            <Link to="/counter" className={`${styles.button} ${styles.buttonPrimary}`}>
               Try Counter App
-            </Button>
-            <Button variant="secondary" size="lg" as={Link} to="/todos">
+            </Link>
+            <Link to="/todos" className={`${styles.button} ${styles.buttonSecondary}`}>
               Try Todo App
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -82,27 +81,20 @@ export const Home: React.FC = () => {
         <h2 className={styles.sectionTitle}>Available Applications</h2>
         <div className={styles.appGrid}>
           {apps.map((app) => (
-            <Card
-              key={app.name}
-              className={styles.appCard}
-              hoverable
-              padding="lg"
-            >
+            <div key={app.name} className={styles.appCard}>
               <div className={styles.appIcon} style={{ color: app.color }}>
                 {app.icon}
               </div>
               <h3 className={styles.appName}>{app.name}</h3>
               <p className={styles.appDescription}>{app.description}</p>
-              <Button
-                variant="primary"
-                fullWidth
-                as={Link}
+              <Link
                 to={app.path}
+                className={styles.button}
                 style={{ backgroundColor: app.color, borderColor: app.color }}
               >
                 Open {app.name}
-              </Button>
-            </Card>
+              </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -111,17 +103,17 @@ export const Home: React.FC = () => {
         <h2 className={styles.sectionTitle}>Key Features</h2>
         <div className={styles.featureGrid}>
           {features.map((feature, index) => (
-            <Card key={index} className={styles.featureCard} padding="md">
+            <div key={index} className={styles.featureCard}>
               <div className={styles.featureIcon}>{feature.icon}</div>
               <h3 className={styles.featureTitle}>{feature.title}</h3>
               <p className={styles.featureDescription}>{feature.description}</p>
-            </Card>
+            </div>
           ))}
         </div>
       </section>
 
       <section className={styles.tech}>
-        <Card className={styles.techCard} padding="lg">
+        <div className={styles.techCard}>
           <h2 className={styles.sectionTitle}>Technology Stack</h2>
           <div className={styles.techList}>
             <div className={styles.techItem}>
@@ -140,7 +132,7 @@ export const Home: React.FC = () => {
               <strong>State Management:</strong> React Hooks + localStorage
             </div>
           </div>
-        </Card>
+        </div>
       </section>
     </div>
   );

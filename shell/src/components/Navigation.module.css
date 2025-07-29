@@ -82,9 +82,17 @@
 
 .mobileMenuButton {
   display: none;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobileMenuButton:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .hamburger {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Input } from 'ui-kit';
+import { Input, Button } from 'ui-kit';
 import styles from './TodoForm.module.css';
 
 export interface TodoFormProps {
@@ -24,7 +24,7 @@ export const TodoForm: React.FC<TodoFormProps> = ({
     }
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSubmit(e);
     }
@@ -36,17 +36,14 @@ export const TodoForm: React.FC<TodoFormProps> = ({
         <Input
           value={text}
           onChange={(e) => setText(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          size="lg"
-          fullWidth
           className={styles.input}
         />
         <Button
           type="submit"
-          variant="primary"
-          size="lg"
           disabled={!text.trim()}
+          variant="primary"
           className={styles.button}
         >
           Add Todo

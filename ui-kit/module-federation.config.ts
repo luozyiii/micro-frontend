@@ -1,8 +1,7 @@
 import {createModuleFederationConfig} from '@module-federation/rsbuild-plugin';
-import pkg from './package.json';
 
 export default createModuleFederationConfig({
-  name: pkg.name,
+  name: 'uikit',
   exposes: {
     '.': './src/index.tsx',
   },
@@ -14,4 +13,5 @@ export default createModuleFederationConfig({
       singleton: true,
     },
   },
+  dts: false, // 禁用 TypeScript 类型生成
 })

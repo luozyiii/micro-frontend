@@ -9,6 +9,11 @@
 .errorCard {
   max-width: 600px;
   text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
 }
 
 .icon {
@@ -46,6 +51,41 @@
   gap: 1rem;
   justify-content: center;
   margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.buttonPrimary {
+  background-color: #007bff;
+}
+
+.buttonPrimary:hover {
+  background-color: #0056b3;
+}
+
+.buttonSecondary {
+  background-color: #6c757d;
+}
+
+.buttonSecondary:hover {
+  background-color: #545b62;
 }
 
 .details {

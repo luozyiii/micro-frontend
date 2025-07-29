@@ -4,9 +4,7 @@ import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import moduleFederationConfig from './module-federation.config';
 
 const shared = {
-  dts: {
-    bundle: false,
-  },
+  dts: true, // 启用 TypeScript 声明文件生成
 };
 
 export default defineConfig({

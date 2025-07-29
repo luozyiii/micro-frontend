@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'ui-kit';
+import { Button } from 'ui-kit';
 import { useCounter } from './hooks/useCounter';
 import styles from './Counter.module.css';
 
@@ -29,40 +29,37 @@ export const Counter: React.FC<CounterProps> = ({
   const { count, increment, decrement, reset } = useCounter(initialValue);
 
   return (
-    <Card className={styles.counter} padding="lg">
+    <div className={styles.counter}>
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.display}>
           <span className={styles.count}>{count}</span>
         </div>
       </div>
-      
+
       <div className={styles.controls}>
         <Button
-          variant="danger"
-          size="lg"
           onClick={decrement}
+          variant="danger"
           className={styles.button}
           aria-label="Decrease counter"
         >
           -1
         </Button>
-        
+
         <Button
-          variant="primary"
-          size="lg"
           onClick={increment}
+          variant="primary"
           className={styles.button}
           aria-label="Increase counter"
         >
           +1
         </Button>
-        
+
         {showReset && (
           <Button
-            variant="secondary"
-            size="lg"
             onClick={reset}
+            variant="secondary"
             className={styles.button}
             aria-label="Reset counter"
           >
@@ -70,7 +67,7 @@ export const Counter: React.FC<CounterProps> = ({
           </Button>
         )}
       </div>
-      
+
       <div className={styles.info}>
         <p className={styles.description}>
           Current value: <strong>{count}</strong>
@@ -79,7 +76,7 @@ export const Counter: React.FC<CounterProps> = ({
           💾 Value is automatically saved to localStorage
         </p>
       </div>
-    </Card>
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button, Card } from 'ui-kit';
 import styles from './ErrorBoundary.module.css';
 
 interface Props {
@@ -43,7 +42,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
       return (
         <div className={styles.container}>
-          <Card className={styles.errorCard} padding="lg">
+          <div className={styles.errorCard}>
             <div className={styles.icon}>⚠️</div>
             <h2 className={styles.title}>Something went wrong</h2>
             <p className={styles.message}>
@@ -54,17 +53,17 @@ export class ErrorBoundary extends Component<Props, State> {
               <li>The micro-frontend service is temporarily unavailable</li>
               <li>A configuration error</li>
             </ul>
-            
+
             <div className={styles.actions}>
-              <Button variant="primary" onClick={this.handleRetry}>
+              <button className={`${styles.button} ${styles.buttonPrimary}`} onClick={this.handleRetry}>
                 Try Again
-              </Button>
-              <Button 
-                variant="secondary" 
+              </button>
+              <button
+                className={`${styles.button} ${styles.buttonSecondary}`}
                 onClick={() => window.location.reload()}
               >
                 Reload Page
-              </Button>
+              </button>
             </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -88,7 +87,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
-          </Card>
+          </div>
         </div>
       );
     }

@@ -38,6 +38,43 @@
   flex-wrap: wrap;
 }
 
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  color: white;
+}
+
+.buttonPrimary {
+  background-color: #007bff;
+}
+
+.buttonPrimary:hover {
+  background-color: #0056b3;
+}
+
+.buttonSecondary {
+  background-color: #6c757d;
+}
+
+.buttonSecondary:hover {
+  background-color: #545b62;
+}
+
 .sectionTitle {
   font-size: 2rem;
   font-weight: 600;
@@ -60,10 +97,16 @@
 .appCard {
   text-align: center;
   transition: transform 0.2s ease;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
 }
 
 .appCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .appIcon {
@@ -96,6 +139,11 @@
 
 .featureCard {
   text-align: center;
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
 }
 
 .featureIcon {
@@ -123,6 +171,11 @@
 
 .techCard {
   text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
 }
 
 .techList {

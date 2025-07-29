@@ -1,5 +1,12 @@
-.stats {
+.statsCard {
   margin-bottom: 2rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #495057;
+  font-weight: 600;
 }
 
 .grid {

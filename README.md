@@ -163,3 +163,24 @@ pnpm run clean        # 清理构建产物
 pnpm run setup        # 初始化项目 (安装依赖 + 构建 UI Kit)
 pnpm run start        # 快速启动开发环境
 ```
+
+## ⚙️ 配置文件说明
+
+### 代码质量和格式化
+- **`.eslintrc.js`** - ESLint 配置，代码质量检查
+- **`.prettierrc`** - Prettier 配置，代码格式化
+- **`.editorconfig`** - 编辑器配置，确保团队代码风格一致
+
+### 版本控制
+- **`.gitignore`** - Git 忽略文件配置
+- **`.gitattributes`** - Git 属性配置，处理换行符和文件类型
+
+### 包管理
+- **`pnpm-workspace.yaml`** - pnpm 工作空间配置
+- **`.npmrc`** - npm/pnpm 配置
+- **`.nvmrc`** - Node.js 版本指定
+
+### 构建工具
+- **`tsconfig.json`** - TypeScript 配置
+- **`rsbuild.config.ts`** - Rsbuild 构建配置
+- **`module-federation.config.ts`** - Module Federation 配置

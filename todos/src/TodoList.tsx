@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Card } from 'ui-kit';
+import { Button } from 'ui-kit';
 import { useTodos } from './hooks/useTodos';
 import TodoForm from './components/TodoForm';
 import TodoItem from './components/TodoItem';
@@ -65,7 +65,7 @@ export const TodoList: React.FC<TodoListProps> = ({
 
       {showStats && <TodoStats stats={stats} />}
 
-      <Card className={styles.main} padding="lg">
+      <div className={styles.main}>
         <TodoForm onSubmit={addTodo} />
 
         {hasTodos && (
@@ -73,23 +73,23 @@ export const TodoList: React.FC<TodoListProps> = ({
             <div className={styles.filters}>
               <div className={styles.filterButtons}>
                 <Button
-                  variant={filter === 'all' ? 'primary' : 'light'}
-                  size="sm"
+                  variant={filter === 'all' ? 'primary' : 'secondary'}
                   onClick={() => setFilter('all')}
+                  className={styles.filterButton}
                 >
                   All ({stats.total})
                 </Button>
                 <Button
-                  variant={filter === 'active' ? 'primary' : 'light'}
-                  size="sm"
+                  variant={filter === 'active' ? 'primary' : 'secondary'}
                   onClick={() => setFilter('active')}
+                  className={styles.filterButton}
                 >
                   Active ({stats.pending})
                 </Button>
                 <Button
-                  variant={filter === 'completed' ? 'primary' : 'light'}
-                  size="sm"
+                  variant={filter === 'completed' ? 'primary' : 'secondary'}
                   onClick={() => setFilter('completed')}
+                  className={styles.filterButton}
                 >
                   Completed ({stats.completed})
                 </Button>
@@ -98,17 +98,17 @@ export const TodoList: React.FC<TodoListProps> = ({
               <div className={styles.actions}>
                 {hasCompletedTodos && (
                   <Button
-                    variant="warning"
-                    size="sm"
+                    variant="secondary"
                     onClick={clearCompleted}
+                    className={styles.actionButton}
                   >
                     Clear Completed
                   </Button>
                 )}
                 <Button
                   variant="danger"
-                  size="sm"
                   onClick={clearAll}
+                  className={styles.actionButton}
                 >
                   Clear All
                 </Button>
@@ -144,7 +144,7 @@ export const TodoList: React.FC<TodoListProps> = ({
             <p>💡 <strong>Tip:</strong> Double-click any todo to edit it.</p>
           </div>
         )}
-      </Card>
+      </div>
 
       <div className={styles.footer}>
         <p>💾 All data is automatically saved to your browser's local storage</p>

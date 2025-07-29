@@ -35,7 +35,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
     setEditText(todo.text);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSave();
     } else if (e.key === 'Escape') {
@@ -68,11 +68,10 @@ export const TodoItem: React.FC<TodoItemProps> = ({
             <Input
               value={editText}
               onChange={(e) => setEditText(e.target.value)}
-              onKeyPress={handleKeyPress}
+              onKeyDown={handleKeyDown}
               onBlur={handleSave}
               autoFocus
-              fullWidth
-              size="sm"
+              className={styles.editInput}
             />
           </div>
         ) : (
@@ -92,32 +91,40 @@ export const TodoItem: React.FC<TodoItemProps> = ({
         {isEditing ? (
           <>
             <Button
-              variant="success"
-              size="sm"
               onClick={handleSave}
               disabled={!editText.trim()}
+              variant="primary"
+              size="sm"
+              className={styles.button}
             >
               Save
             </Button>
-            <Button variant="secondary" size="sm" onClick={handleCancel}>
+            <Button
+              onClick={handleCancel}
+              variant="secondary"
+              size="sm"
+              className={styles.button}
+            >
               Cancel
             </Button>
           </>
         ) : (
           <>
             <Button
-              variant="info"
-              size="sm"
               onClick={() => setIsEditing(true)}
               aria-label="Edit todo"
+              variant="secondary"
+              size="sm"
+              className={styles.button}
             >
               Edit
             </Button>
             <Button
-              variant="danger"
-              size="sm"
               onClick={() => onDelete(todo.id)}
               aria-label="Delete todo"
+              variant="danger"
+              size="sm"
+              className={styles.button}
             >
               Delete
             </Button>

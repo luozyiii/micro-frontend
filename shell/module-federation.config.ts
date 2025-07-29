@@ -11,4 +11,5 @@ export default createModuleFederationConfig({
     'react-dom': { singleton: true },
     'react-router-dom': { singleton: true },
   },
+  dts: false, // 禁用 TypeScript 类型生成
 });

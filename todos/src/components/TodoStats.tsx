@@ -14,36 +14,41 @@ export const TodoStats: React.FC<TodoStatsProps> = ({ stats }) => {
   const { total, completed, pending, completionRate } = stats;
 
   return (
-    <Card className={styles.stats} padding="md">
+    <Card
+      variant="elevated"
+      padding="lg"
+      header={<h3 className={styles.title}>Todo Statistics</h3>}
+      className={styles.statsCard}
+    >
       <div className={styles.grid}>
         <div className={styles.stat}>
           <div className={styles.value}>{total}</div>
           <div className={styles.label}>Total</div>
         </div>
-        
+
         <div className={styles.stat}>
           <div className={styles.value}>{completed}</div>
           <div className={styles.label}>Completed</div>
         </div>
-        
+
         <div className={styles.stat}>
           <div className={styles.value}>{pending}</div>
           <div className={styles.label}>Pending</div>
         </div>
-        
+
         <div className={styles.stat}>
           <div className={styles.value}>{completionRate.toFixed(0)}%</div>
           <div className={styles.label}>Progress</div>
         </div>
       </div>
-      
+
       {total > 0 && (
         <div className={styles.progressBar}>
           <div className={styles.progressLabel}>
             Completion Progress
           </div>
           <div className={styles.progressTrack}>
-            <div 
+            <div
               className={styles.progressFill}
               style={{ width: `${completionRate}%` }}
             />
