@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.card {
+  max-width: 600px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #dc3545;
+  margin: 0 0 1rem 0;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #495057;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.suggestion {
+  color: #6c757d;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.help {
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.help p {
+  margin: 0;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    min-height: 50vh;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .message {
+    font-size: 1rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .icon {
+    font-size: 3rem;
+  }
+}

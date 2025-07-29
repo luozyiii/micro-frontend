@@ -1,0 +1,122 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.item:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+}
+
+.item.completed {
+  background-color: #f8f9fa;
+  opacity: 0.8;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.checkbox:hover {
+  background-color: #f8f9fa;
+}
+
+.item.completed .checkbox {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checkmark {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.textContent {
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.text {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.item.completed .text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.date {
+  display: block;
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+.editForm {
+  flex: 1;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .content {
+    gap: 0.75rem;
+  }
+  
+  .actions {
+    justify-content: flex-end;
+  }
+  
+  .checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .checkmark {
+    font-size: 12px;
+  }
+}

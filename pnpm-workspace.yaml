@@ -1,0 +1,5 @@
+packages:
+  - 'shell'
+  - 'counter'
+  - 'todos'
+  - 'ui-kit'
