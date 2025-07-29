@@ -68,11 +68,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
-  
+
   .value {
     font-size: 1.5rem;
   }
-  
+
   .label {
     font-size: 0.75rem;
   }
@@ -83,14 +83,14 @@
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
-  
+
   .stat {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
   }
-  
+
   .value {
     font-size: 1.25rem;
   }

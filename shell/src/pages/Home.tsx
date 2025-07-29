@@ -60,17 +60,22 @@ export const Home: React.FC = () => {
     <div className={styles.home}>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            Welcome to Micro Frontend Demo
-          </h1>
+          <h1 className={styles.heroTitle}>Welcome to Micro Frontend Demo</h1>
           <p className={styles.heroSubtitle}>
-            Explore the power of Module Federation with React, TypeScript, and Rsbuild
+            Explore the power of Module Federation with React, TypeScript, and
+            Rsbuild
           </p>
           <div className={styles.heroActions}>
-            <Link to="/counter" className={`${styles.button} ${styles.buttonPrimary}`}>
+            <Link
+              to="/counter"
+              className={`${styles.button} ${styles.buttonPrimary}`}
+            >
               Try Counter App
             </Link>
-            <Link to="/todos" className={`${styles.button} ${styles.buttonSecondary}`}>
+            <Link
+              to="/todos"
+              className={`${styles.button} ${styles.buttonSecondary}`}
+            >
               Try Todo App
             </Link>
           </div>
@@ -80,7 +85,7 @@ export const Home: React.FC = () => {
       <section className={styles.apps}>
         <h2 className={styles.sectionTitle}>Available Applications</h2>
         <div className={styles.appGrid}>
-          {apps.map((app) => (
+          {apps.map(app => (
             <div key={app.name} className={styles.appCard}>
               <div className={styles.appIcon} style={{ color: app.color }}>
                 {app.icon}

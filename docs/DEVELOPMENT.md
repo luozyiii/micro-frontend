@@ -3,10 +3,12 @@
 ## 🚀 快速开始
 
 ### 环境要求
+
 - Node.js >= 16.0.0
 - pnpm
 
 ### 项目初始化
+
 ```bash
 # 克隆项目
 git clone <repository-url>
@@ -20,6 +22,7 @@ pnpm run dev
 ```
 
 ### 访问应用
+
 - 🏠 主应用: http://localhost:3000
 - 🔢 计数器: http://localhost:3001
 - ✅ 待办: http://localhost:3002
@@ -87,6 +90,7 @@ module-federation/
 ## 🔧 开发脚本
 
 ### 根目录脚本
+
 ```bash
 # 安装所有依赖
 npm install
@@ -116,6 +120,7 @@ pnpm run clean
 ```
 
 ### 各应用脚本
+
 ```bash
 # 进入具体应用目录
 cd shell  # 或 counter, todos
@@ -136,6 +141,7 @@ pnpm run type-check
 ## ⚙️ 配置说明
 
 ### Rsbuild 配置 (主应用)
+
 ```typescript
 // shell/rsbuild.config.ts
 import { defineConfig } from '@rsbuild/core';
@@ -169,6 +175,7 @@ export default defineConfig({
 ```
 
 ### Rsbuild 配置 (微应用)
+
 ```typescript
 // counter/rsbuild.config.ts
 import { defineConfig } from '@rsbuild/core';
@@ -203,6 +210,7 @@ export default defineConfig({
 ## 🎨 组件开发
 
 ### 创建新的共享组件
+
 ```bash
 # 1. 在 ui-kit/src 下创建组件目录
 mkdir ui-kit/src/NewComponent
@@ -220,6 +228,7 @@ pnpm run build:ui-kit
 ```
 
 ### 组件开发规范
+
 ```typescript
 // 组件模板
 import React from 'react';
@@ -243,6 +252,7 @@ export default Component;
 ## 🔄 微应用开发
 
 ### 创建新的微应用
+
 ```bash
 # 1. 创建应用目录
 mkdir new-app
@@ -261,6 +271,7 @@ npm install -D @rsbuild/core @rsbuild/plugin-react @module-federation/enhanced
 ```
 
 ### 微应用开发规范
+
 - 每个微应用都应该能够独立运行
 - 暴露的组件应该是纯组件，不依赖外部状态
 - 使用 TypeScript 定义清晰的 props 接口
@@ -269,11 +280,13 @@ npm install -D @rsbuild/core @rsbuild/plugin-react @module-federation/enhanced
 ## 🧪 调试技巧
 
 ### 开发者工具
+
 - 使用 React DevTools 调试组件
 - 使用 Network 面板查看模块加载
 - 使用 Console 查看 Module Federation 日志
 
 ### 常见问题排查
+
 ```bash
 # 1. 端口冲突
 lsof -ti:3000 | xargs kill -9
@@ -291,6 +304,7 @@ pnpm run clean
 ```
 
 ### 调试模式
+
 ```bash
 # 启用详细日志
 DEBUG=* pnpm run dev
@@ -302,6 +316,7 @@ pnpm run build -- --analyze
 ## 📦 构建
 
 ### 本地构建
+
 ```bash
 # 构建所有应用
 pnpm run build
@@ -313,16 +328,19 @@ pnpm run preview
 ## 🔍 最佳实践
 
 ### 代码组织
+
 - 保持各应用的独立性
 - 共享组件放在 ui-kit 中
 - 避免应用间的直接依赖
 
 ### 性能优化
+
 - 合理配置 shared 依赖
 - 使用 React.lazy 懒加载组件
 - 启用代码分割
 
 ### 类型安全
+
 - 为暴露的组件定义类型
 - 使用 TypeScript 严格模式
 - 定期检查类型错误

@@ -149,15 +149,15 @@
   .navItems {
     display: none;
   }
-  
+
   .mobileMenuButton {
     display: flex;
   }
-  
+
   .mobileNav {
     display: block;
   }
-  
+
   .brandText {
     display: none;
   }
@@ -167,11 +167,11 @@
   .container {
     padding: 0 0.5rem;
   }
-  
+
   .brandLink {
     font-size: 1.1rem;
   }
-  
+
   .brandIcon {
     font-size: 1.25rem;
   }

@@ -141,13 +141,17 @@ export const TodoList: React.FC<TodoListProps> = ({
           <div className={styles.welcome}>
             <h3>Welcome to your Todo List!</h3>
             <p>Add your first todo above to get started.</p>
-            <p>💡 <strong>Tip:</strong> Double-click any todo to edit it.</p>
+            <p>
+              💡 <strong>Tip:</strong> Double-click any todo to edit it.
+            </p>
           </div>
         )}
       </div>
 
       <div className={styles.footer}>
-        <p>💾 All data is automatically saved to your browser's local storage</p>
+        <p>
+          💾 All data is automatically saved to your browser&apos;s local storage
+        </p>
       </div>
     </div>
   );

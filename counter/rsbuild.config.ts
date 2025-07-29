@@ -14,4 +14,9 @@ export default defineConfig({
       description: 'A simple counter application with persistent state',
     },
   },
+  resolve: {
+    alias: {
+      'ui-kit': '../ui-kit/src',
+    },
+  },
 });

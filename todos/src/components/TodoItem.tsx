@@ -58,7 +58,9 @@ export const TodoItem: React.FC<TodoItemProps> = ({
         <button
           className={styles.checkbox}
           onClick={() => onToggle(todo.id)}
-          aria-label={todo.completed ? 'Mark as incomplete' : 'Mark as complete'}
+          aria-label={
+            todo.completed ? 'Mark as incomplete' : 'Mark as complete'
+          }
         >
           {todo.completed && <span className={styles.checkmark}>✓</span>}
         </button>
@@ -67,7 +69,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
           <div className={styles.editForm}>
             <Input
               value={editText}
-              onChange={(e) => setEditText(e.target.value)}
+              onChange={e => setEditText(e.target.value)}
               onKeyDown={handleKeyDown}
               onBlur={handleSave}
               autoFocus
@@ -75,7 +77,10 @@ export const TodoItem: React.FC<TodoItemProps> = ({
             />
           </div>
         ) : (
-          <div className={styles.textContent} onDoubleClick={() => setIsEditing(true)}>
+          <div
+            className={styles.textContent}
+            onDoubleClick={() => setIsEditing(true)}
+          >
             <span className={styles.text}>{todo.text}</span>
             <span className={styles.date}>
               Created: {formatDate(todo.createdAt)}

@@ -1,39 +1,80 @@
 .counter {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(0, 212, 255, 0.1);
+  border: 1px solid #3a3a3a;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.counter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
 }
 
 .header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
   margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .display {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 1rem 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  box-shadow:
+    0 15px 30px rgba(0, 212, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.display::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 .count {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 900;
   color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   display: block;
   line-height: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .controls {
@@ -45,50 +86,82 @@
 }
 
 .button {
-  min-width: 80px;
+  min-width: 120px;
   font-weight: 600;
-  transition: all 0.2s ease;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 1.1rem;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.button:hover::before {
+  left: 100%;
 }
 
 .button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
 }
 
 .button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
 .buttonPrimary {
-  background-color: #007bff;
+  background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
   color: white;
+  border-color: #00d4ff;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
 }
 
 .buttonPrimary:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #00b8e6 0%, #7c3aed 100%);
+  box-shadow: 0 12px 25px rgba(0, 212, 255, 0.4);
 }
 
 .buttonDanger {
-  background-color: #dc3545;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
   color: white;
+  border-color: #ef4444;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
 }
 
 .buttonDanger:hover {
-  background-color: #c82333;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 12px 25px rgba(239, 68, 68, 0.4);
 }
 
 .buttonSecondary {
-  background-color: #6c757d;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .buttonSecondary:hover {
-  background-color: #545b62;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .info {
@@ -116,21 +189,21 @@
     max-width: 100%;
     margin: 0;
   }
-  
+
   .controls {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .button {
     width: 100%;
     max-width: 200px;
   }
-  
+
   .count {
     font-size: 2.5rem;
   }
-  
+
   .display {
     padding: 1.5rem;
   }

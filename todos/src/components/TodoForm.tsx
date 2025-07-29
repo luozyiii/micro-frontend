@@ -35,7 +35,7 @@ export const TodoForm: React.FC<TodoFormProps> = ({
       <div className={styles.inputGroup}>
         <Input
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={e => setText(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           className={styles.input}

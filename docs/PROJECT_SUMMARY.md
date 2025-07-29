@@ -7,12 +7,14 @@
 ## ✅ 已完成的功能
 
 ### 1. 核心应用架构
+
 - **Shell 主应用** (端口 3000): 微前端容器，提供路由和导航
 - **Counter 应用** (端口 3001): 计数器功能，演示状态管理
 - **Todos 应用** (端口 3002): 待办事项管理，演示 CRUD 操作
 - **UI Kit 组件库**: 共享的设计系统和 UI 组件
 
 ### 2. 技术实现
+
 - ✅ **Module Federation**: 运行时动态加载微前端
 - ✅ **React 18 + TypeScript**: 现代前端技术栈
 - ✅ **React Router**: 客户端路由管理
@@ -21,13 +23,12 @@
 - ✅ **响应式设计**: 支持桌面和移动端
 
 ### 3. 开发体验
+
 - ✅ **pnpm 工作空间**: 高效的包管理
 - ✅ **热重载**: 开发时实时预览
 - ✅ **TypeScript**: 完整的类型检查
 - ✅ **ESLint + Prettier**: 代码质量保证
 - ✅ **错误边界**: 优雅的错误处理
-
-
 
 ## 📁 项目结构
 
@@ -102,6 +103,7 @@ module-federation/
 ## 🚀 快速开始
 
 ### 1. 环境准备
+
 ```bash
 # 安装 pnpm
 npm install -g pnpm
@@ -112,6 +114,7 @@ cd module-federation
 ```
 
 ### 2. 安装和启动
+
 ```bash
 # 安装依赖
 pnpm install
@@ -125,6 +128,7 @@ pnpm run dev    # 启动所有应用
 ```
 
 ### 3. 访问应用
+
 - 🏠 主应用: http://localhost:3000
 - 🔢 计数器: http://localhost:3001
 - ✅ 待办: http://localhost:3002
@@ -132,18 +136,21 @@ pnpm run dev    # 启动所有应用
 ## 🎯 学习要点
 
 ### Module Federation 核心概念
+
 1. **Host vs Remote**: Shell 作为 Host，Counter 和 Todos 作为 Remote
 2. **动态导入**: 运行时加载远程模块
 3. **依赖共享**: React 等库的单例共享
 4. **错误处理**: ErrorBoundary 和 Suspense 的使用
 
 ### 微前端最佳实践
+
 1. **独立开发**: 每个应用可独立开发和测试
 2. **独立部署**: 支持单独部署和版本管理
 3. **技术隔离**: 不同应用可使用不同技术栈
 4. **状态隔离**: 各应用独立的状态管理
 
 ### 现代前端工程化
+
 1. **包管理**: pnpm 工作空间的高效管理
 2. **代码质量**: ESLint + Prettier + TypeScript
 3. **构建优化**: 代码分割和热重载
@@ -151,18 +158,21 @@ pnpm run dev    # 启动所有应用
 ## 🔧 扩展建议
 
 ### 功能扩展
+
 - 添加用户认证和权限管理
 - 集成状态管理库 (Redux, Zustand)
 - 添加国际化支持 (i18n)
 - 集成测试框架 (Jest, Testing Library)
 
 ### 技术升级
+
 - 升级到 React 19
 - 集成 Server-Side Rendering (SSR)
 - 添加 Progressive Web App (PWA) 支持
 - 集成微服务后端
 
 ### 监控和分析
+
 - 集成错误监控 (Sentry)
 - 添加性能监控 (Web Vitals)
 - 集成用户行为分析

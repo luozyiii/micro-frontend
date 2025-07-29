@@ -1,4 +1,4 @@
-import {createModuleFederationConfig} from '@module-federation/rsbuild-plugin';
+import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
 
 export default createModuleFederationConfig({
   name: 'uikit',
@@ -14,4 +14,4 @@ export default createModuleFederationConfig({
     },
   },
   dts: false, // 禁用 TypeScript 类型生成
-})
+});

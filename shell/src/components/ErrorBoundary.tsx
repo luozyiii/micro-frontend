@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import styles from './ErrorBoundary.module.css';
 
 interface Props {
@@ -46,7 +46,8 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className={styles.icon}>⚠️</div>
             <h2 className={styles.title}>Something went wrong</h2>
             <p className={styles.message}>
-              We encountered an error while loading this component. This might be due to:
+              We encountered an error while loading this component. This might
+              be due to:
             </p>
             <ul className={styles.reasons}>
               <li>Network connectivity issues</li>
@@ -55,7 +56,10 @@ export class ErrorBoundary extends Component<Props, State> {
             </ul>
 
             <div className={styles.actions}>
-              <button className={`${styles.button} ${styles.buttonPrimary}`} onClick={this.handleRetry}>
+              <button
+                className={`${styles.button} ${styles.buttonPrimary}`}
+                onClick={this.handleRetry}
+              >
                 Try Again
               </button>
               <button

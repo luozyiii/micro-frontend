@@ -52,7 +52,10 @@ export const useTodos = (): UseTodosReturn => {
     total: todos.length,
     completed: todos.filter(todo => todo.completed).length,
     pending: todos.filter(todo => !todo.completed).length,
-    completionRate: todos.length > 0 ? (todos.filter(todo => todo.completed).length / todos.length) * 100 : 0,
+    completionRate:
+      todos.length > 0
+        ? (todos.filter(todo => todo.completed).length / todos.length) * 100
+        : 0,
   };
 
   // Add a new todo

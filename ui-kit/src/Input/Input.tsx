@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
 import styles from './Input.module.css';
 
-export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface InputProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   /**
    * Input size
    */
@@ -57,7 +58,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     const inputId = id || `input-${Math.random().toString(36).substr(2, 9)}`;
-    
+
     const inputClasses = [
       styles.input,
       styles[`input--${size}`],
@@ -88,12 +89,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           {startIcon && (
             <div className={styles['input-icon--start']}>{startIcon}</div>
           )}
-          <input
-            ref={ref}
-            id={inputId}
-            className={inputClasses}
-            {...props}
-          />
+          <input ref={ref} id={inputId} className={inputClasses} {...props} />
           {endIcon && (
             <div className={styles['input-icon--end']}>{endIcon}</div>
           )}

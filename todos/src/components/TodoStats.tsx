@@ -44,9 +44,7 @@ export const TodoStats: React.FC<TodoStatsProps> = ({ stats }) => {
 
       {total > 0 && (
         <div className={styles.progressBar}>
-          <div className={styles.progressLabel}>
-            Completion Progress
-          </div>
+          <div className={styles.progressLabel}>Completion Progress</div>
           <div className={styles.progressTrack}>
             <div
               className={styles.progressFill}

@@ -11,7 +11,8 @@ export default defineConfig({
   html: {
     title: 'Micro Frontend Demo - Shell',
     meta: {
-      description: 'A demonstration of micro-frontend architecture using Module Federation',
+      description:
+        'A demonstration of micro-frontend architecture using Module Federation',
     },
   },
 });

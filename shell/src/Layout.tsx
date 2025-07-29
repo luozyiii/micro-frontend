@@ -17,18 +17,18 @@ export const Layout: React.FC = () => {
         <div className={styles.footerContent}>
           <p>
             Built with ❤️ using{' '}
-            <a 
-              href="https://rsbuild.dev" 
-              target="_blank" 
+            <a
+              href="https://rsbuild.dev"
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
             >
               Rsbuild
             </a>{' '}
             +{' '}
-            <a 
-              href="https://module-federation.io" 
-              target="_blank" 
+            <a
+              href="https://module-federation.io"
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
             >

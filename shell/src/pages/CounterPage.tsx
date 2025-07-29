@@ -12,7 +12,9 @@ export const CounterPage: React.FC = () => {
   return (
     <div>
       <ErrorBoundary>
-        <Suspense fallback={<Loading message="Loading Counter application..." />}>
+        <Suspense
+          fallback={<Loading message="Loading Counter application..." />}
+        >
           <Counter />
         </Suspense>
       </ErrorBoundary>

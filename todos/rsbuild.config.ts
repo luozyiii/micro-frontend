@@ -14,4 +14,9 @@ export default defineConfig({
       description: 'A task management application with full CRUD operations',
     },
   },
+  resolve: {
+    alias: {
+      'ui-kit': '../ui-kit/src',
+    },
+  },
 });

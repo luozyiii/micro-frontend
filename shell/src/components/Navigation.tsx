@@ -47,7 +47,7 @@ export const Navigation: React.FC<NavigationProps> = ({
 
         {/* Desktop Navigation */}
         <div className={styles.navItems}>
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <Link
               key={item.path}
               to={item.path}
@@ -78,7 +78,7 @@ export const Navigation: React.FC<NavigationProps> = ({
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className={styles.mobileNav}>
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <Link
               key={item.path}
               to={item.path}

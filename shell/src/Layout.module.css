@@ -2,50 +2,109 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.layout::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(0, 212, 255, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(139, 92, 246, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: -1;
 }
 
 .main {
   flex: 1;
   padding: 2rem 1rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .footer {
-  background-color: #343a40;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   color: #ffffff;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem 2rem;
   margin-top: auto;
+  border-top: 1px solid #3a3a3a;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
 }
 
 .footerContent {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
 .footerContent p {
   margin: 0.5rem 0;
   line-height: 1.6;
+  color: #cccccc;
 }
 
 .link {
-  color: #007bff;
+  color: #00d4ff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d4ff, #8b5cf6);
+  transition: width 0.3s ease;
 }
 
 .link:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #00b8e6;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 .copyright {
   font-size: 0.875rem;
-  color: #adb5bd;
+  color: #8a8a8a;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #3a3a3a;
 }
 
 /* Responsive design */
@@ -53,11 +112,11 @@
   .main {
     padding: 1rem 0.5rem;
   }
-  
+
   .footer {
     padding: 1.5rem 1rem;
   }
-  
+
   .footerContent p {
     font-size: 0.875rem;
   }
@@ -67,7 +126,7 @@
   .main {
     padding: 1rem 0.25rem;
   }
-  
+
   .footer {
     padding: 1rem 0.5rem;
   }
