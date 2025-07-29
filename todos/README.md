@@ -1,29 +1,53 @@
-# Rsbuild Project
+# 待办事项应用
 
-## Setup
+微前端架构中的任务管理子应用，提供完整的 CRUD 功能和数据统计。
 
-Install the dependencies:
+## 功能特性
+
+- ✅ **任务管理**: 添加、编辑、删除、完成任务
+- 🔍 **智能过滤**: 按状态筛选任务（全部/待完成/已完成）
+- 📊 **数据统计**: 实时显示任务完成情况和进度
+- 💾 **数据持久化**: 自动保存到本地存储
+- 🎨 **现代 UI**: 扁平化设计，优化的用户体验
+- 📱 **响应式**: 完美适配桌面和移动设备
+
+## 技术栈
+
+- **框架**: React 18 + TypeScript
+- **构建工具**: Rsbuild + Module Federation
+- **样式**: CSS Modules
+- **UI 组件**: 共享 UI Kit
+- **状态管理**: React Hooks + localStorage
+- **数据处理**: 自定义 Hooks
+
+## 快速开始
 
 ```bash
+# 安装依赖
 pnpm install
-```
 
-## Get Started
-
-Start the dev server:
-
-```bash
+# 启动开发服务器 (端口 3002)
 pnpm dev
-```
 
-Build the app for production:
-
-```bash
+# 构建生产版本
 pnpm build
-```
 
-Preview the production build locally:
-
-```bash
+# 预览生产构建
 pnpm preview
 ```
+
+## 独立访问
+
+- 独立应用: http://localhost:3002
+- 集成访问: http://localhost:3000/todos
+
+## 组件导出
+
+该应用通过 Module Federation 导出 `TodoList` 组件，可被主应用动态加载。
+
+## 主要功能
+
+- **任务操作**: 双击编辑、一键删除、状态切换
+- **批量操作**: 清除已完成、清除全部
+- **数据统计**: 总计、已完成、待完成、完成率
+- **进度可视化**: 动态进度条显示完成情况
