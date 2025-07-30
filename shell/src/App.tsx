@@ -8,8 +8,11 @@ import NotFound from './pages/NotFound';
 import './App.css';
 
 const App: React.FC = () => {
+  // GitHub Pages 部署时需要设置 basename
+  const basename = process.env.NODE_ENV === 'production' ? '/micro-frontend' : '';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

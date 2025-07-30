@@ -56,6 +56,8 @@ jobs:
         touch .nojekyll
         echo "# 微前端演示平台" > README.md
         echo "基于 Module Federation 的微前端架构演示" >> README.md
+        # 创建 404.html 用于 SPA 路由重定向
+        cp index.html 404.html
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
