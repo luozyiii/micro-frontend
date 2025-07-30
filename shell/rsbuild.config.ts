@@ -12,10 +12,10 @@ export default defineConfig({
     port: 3000,
   },
   html: {
-    title: '微前端演示平台',
+    title: 'Nexus Frontend Hub',
     meta: {
-      description: '基于 Module Federation 的微前端架构演示平台',
-      keywords: '微前端,Module Federation,React,TypeScript',
+      description: 'A cutting-edge micro-frontend platform powered by Module Federation',
+      keywords: 'micro-frontend,module-federation,react,typescript,nexus',
     },
   },
   output: {
