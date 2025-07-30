@@ -5,9 +5,9 @@ const isProduction = process.env.NODE_ENV === 'production';
 export default createModuleFederationConfig({
   name: 'shell',
   remotes: isProduction ? {
-    // GitHub Pages 部署地址
-    counter: 'counter@https://luozyiii.github.io/micro-frontend/counter/remoteEntry.js',
-    todos: 'todos@https://luozyiii.github.io/micro-frontend/todos/remoteEntry.js',
+    // GitHub Pages 部署地址 - 使用 mf- 前缀避免路由冲突
+    counter: 'counter@https://luozyiii.github.io/micro-frontend/mf-counter/remoteEntry.js',
+    todos: 'todos@https://luozyiii.github.io/micro-frontend/mf-todos/remoteEntry.js',
   } : {
     // 本地开发地址
     counter: 'counter@http://localhost:3001/remoteEntry.js',

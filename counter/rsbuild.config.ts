@@ -20,7 +20,7 @@ export default defineConfig({
   output: {
     // GitHub Pages 部署配置
     ...(isProduction && {
-      assetPrefix: '/micro-frontend/counter/',
+      assetPrefix: '/micro-frontend/mf-counter/',
     }),
   },
   resolve: {

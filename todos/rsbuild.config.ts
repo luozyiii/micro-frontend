@@ -19,7 +19,7 @@ export default defineConfig({
   output: {
     // GitHub Pages 部署配置
     ...(isProduction && {
-      assetPrefix: '/micro-frontend/todos/',
+      assetPrefix: '/micro-frontend/mf-todos/',
     }),
   },
   resolve: {

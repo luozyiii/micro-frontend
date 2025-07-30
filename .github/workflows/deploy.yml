@@ -74,13 +74,17 @@ jobs:
         # 复制 shell 应用到根目录
         cp -r shell/dist/* deploy/
 
-        # 复制 counter 应用到 /counter 子目录
-        mkdir -p deploy/counter
-        cp -r counter/dist/* deploy/counter/
+        # 复制子应用的 remoteEntry.js 和静态资源到子目录
+        # 但不复制子应用的 index.html，避免直接访问
+        mkdir -p deploy/mf-counter
+        cp counter/dist/remoteEntry.js deploy/mf-counter/
+        cp -r counter/dist/static deploy/mf-counter/ 2>/dev/null || true
+        cp -r counter/dist/mf-* deploy/mf-counter/ 2>/dev/null || true
 
-        # 复制 todos 应用到 /todos 子目录
-        mkdir -p deploy/todos
-        cp -r todos/dist/* deploy/todos/
+        mkdir -p deploy/mf-todos
+        cp todos/dist/remoteEntry.js deploy/mf-todos/
+        cp -r todos/dist/static deploy/mf-todos/ 2>/dev/null || true
+        cp -r todos/dist/mf-* deploy/mf-todos/ 2>/dev/null || true
 
         # 设置 GitHub Pages 配置
         cd deploy
