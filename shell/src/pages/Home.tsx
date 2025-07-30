@@ -60,7 +60,7 @@ export const Home: React.FC = () => {
     <div className={styles.home}>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>欢迎使用微前端演示平台</h1>
+          <h1 className={styles.heroTitle}>欢迎使用微前端生态平台</h1>
           <p className={styles.heroSubtitle}>
             探索基于 React、TypeScript 和 Rsbuild 的模块联邦（Module Federation）强大功能
           </p>

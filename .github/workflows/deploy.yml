@@ -1,4 +1,4 @@
-name: Deploy Micro Frontend to GitHub Pages
+name: Deploy 微前端生态平台 to GitHub Pages
 
 on:
   push:

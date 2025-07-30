@@ -1,7 +1,7 @@
 {
   "name": "module-federation-project",
   "version": "1.0.0",
-  "description": "基于 Rsbuild + Module Federation 的微前端学习项目",
+  "description": "基于 Rsbuild + Module Federation 的微前端生态平台",
   "private": true,
   "workspaces": [
     "shell",

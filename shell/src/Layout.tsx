@@ -36,7 +36,7 @@ export const Layout: React.FC = () => {
             </a>
           </p>
           <p className={styles.copyright}>
-            © 2024 微前端演示平台. 保留所有权利.
+            © 2025 微前端生态平台. 924361501@qq.com 保留所有权利.
           </p>
         </div>
       </footer>

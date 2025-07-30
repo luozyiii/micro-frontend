@@ -13,7 +13,7 @@ export interface NavigationProps {
  * Navigation component with responsive design
  */
 export const Navigation: React.FC<NavigationProps> = ({
-  brand = '微前端演示平台',
+  brand = '微前端生态平台',
 }) => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
