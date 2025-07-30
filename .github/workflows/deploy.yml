@@ -1,0 +1,77 @@
+name: Deploy Micro Frontend to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'shell/**'
+      - 'ui-kit/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Build UI Kit
+      run: |
+        cd ui-kit
+        pnpm build
+
+    - name: Build Shell App
+      run: |
+        cd shell
+        pnpm build
+      env:
+        NODE_ENV: production
+
+    - name: Setup GitHub Pages
+      run: |
+        cd shell/dist
+        touch .nojekyll
+        echo "# 微前端演示平台" > README.md
+        echo "基于 Module Federation 的微前端架构演示" >> README.md
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: ./shell/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2

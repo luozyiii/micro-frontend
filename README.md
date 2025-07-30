@@ -40,6 +40,8 @@ module-federation/
 │   │   ├── Input/      # 输入框组件
 │   │   └── Card/       # 卡片组件
 │   └── package.json
+├── .github/workflows/  # GitHub Actions 部署配置
+├── DEPLOY.md           # 部署说明
 └── package.json        # 根配置
 ```
 
@@ -109,10 +111,24 @@ pnpm run dev:ui-kit   # UI 组件库
 
 ### 4. 访问应用
 
+#### 本地开发
 - 🏠 **主应用**: http://localhost:3000
 - 🔢 **计数器**: http://localhost:3000/counter (集成) | http://localhost:3001 (独立)
 - ✅ **待办事项**: http://localhost:3000/todos (集成) | http://localhost:3002 (独立)
 - 🎨 **UI 组件库**: http://localhost:6006 (Storybook)
+
+#### 在线演示
+- 🌐 **GitHub Pages**: https://your-username.github.io/your-repo-name/
+
+## 🚀 部署到 GitHub Pages
+
+### 快速部署
+
+1. **推送代码到 GitHub**
+2. **启用 GitHub Pages**: Settings → Pages → Source: GitHub Actions
+3. **自动部署**: 推送后自动构建和部署
+
+详细说明请查看 [DEPLOY.md](./DEPLOY.md)
 
 ## 🎓 学习重点
 
