@@ -48,6 +48,7 @@ jobs:
         pnpm build
       env:
         NODE_ENV: production
+        GITHUB_PAGES: true
 
     - name: Setup GitHub Pages
       run: |
