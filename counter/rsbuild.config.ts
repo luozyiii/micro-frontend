@@ -14,6 +14,7 @@ export default defineConfig({
     title: 'Counter Application',
     meta: {
       description: 'A simple counter application with persistent state',
+      keywords: 'counter,react,micro-frontend',
     },
   },
   output: {
