@@ -1,257 +1,171 @@
-/*
-=== 导航栏底色方案选择 ===
-取消注释你喜欢的方案，注释掉其他方案
-
-方案1: 深色半透明毛玻璃 - 现代感强，有层次
-方案2: 纯深色 - 简洁专业，低调
-方案3: 橙色渐变 - 品牌突出，活力
-方案4: 深灰色 - 优雅稳重，商务
-方案5: 黑色透明 - 极简主义，高端
-*/
-
-/* 方案1: 深色半透明毛玻璃 - 当前激活 */
+/* 导航栏样式 - 优化版本 */
 .nav {
   background: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(247, 127, 0, 0.2);
+  border-bottom: 1px solid var(--color-primary-alpha);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: var(--z-sticky);
 }
-
-/* 方案2: 纯深色 - 简洁专业 */
-/*
-.nav {
-  background-color: #1e1e1e;
-  border-bottom: 1px solid #333333;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-*/
-
-/* 方案3: 橙色渐变 - 品牌突出 */
-/*
-.nav {
-  background: linear-gradient(135deg, #f77f00 0%, #ff9500 100%);
-  box-shadow: 0 2px 8px rgba(247, 127, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-*/
-
-/* 方案4: 深灰色 - 优雅稳重 */
-/*
-.nav {
-  background-color: #2d2d2d;
-  border-bottom: 1px solid #404040;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-*/
-
-/* 方案5: 黑色透明 - 极简主义 */
-/*
-.nav {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-*/
 
 .container {
-  max-width: 1400px;
+  max-width: var(--breakpoint-xl);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--spacing-md);
+}
+
+.content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 64px;
 }
 
 .brand {
-  flex-shrink: 0;
-}
-
-.brandLink {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  font-size: var(--font-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-white);
   text-decoration: none;
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1.375rem;
-  transition: all 0.2s ease;
+  transition: var(--transition-base);
 }
 
-.brandLink:hover {
-  color: #f77f00;
-}
-
-.brandIcon {
-  font-size: 1.75rem;
-  filter: drop-shadow(0 2px 4px rgba(247, 127, 0, 0.3));
-}
-
-.brandText {
-  white-space: nowrap;
-  background: linear-gradient(135deg, #ffffff 0%, #f77f00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.navItems {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.navLink {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
+.brand:hover {
+  color: var(--color-primary);
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  font-size: 0.95rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
   position: relative;
 }
 
-.navLink:hover {
+.menuLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.menuLink:hover {
+  color: var(--color-primary);
   background-color: rgba(247, 127, 0, 0.1);
-  color: #f77f00;
-  transform: translateY(-1px);
+  text-decoration: none;
 }
 
-.navLink.active {
-  background-color: rgba(247, 127, 0, 0.15);
-  color: #f77f00;
-  font-weight: 600;
+.menuLink.active {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
 }
 
-.navLink.active::after {
+.menuLink.active::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  background-color: #f77f00;
-  border-radius: 50%;
-}
-
-.navIcon {
-  font-size: 1.1rem;
-}
-
-.navText {
-  white-space: nowrap;
+  width: 80%;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 1px;
 }
 
 .mobileMenuButton {
   display: none;
-  background: rgba(247, 127, 0, 0.1);
-  border: 1px solid rgba(247, 127, 0, 0.3);
-  color: #f77f00;
-  padding: 0.75rem;
-  border-radius: 8px;
+  background: none;
+  border: none;
+  color: var(--text-white);
+  font-size: var(--font-xl);
   cursor: pointer;
-  transition: all 0.2s ease;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
 }
 
 .mobileMenuButton:hover {
-  background: rgba(247, 127, 0, 0.2);
-  border-color: #f77f00;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  width: 18px;
-  height: 14px;
-}
-
-.hamburger span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: currentColor;
-  border-radius: 1px;
-  transition: all 0.2s ease;
-}
-
-.mobileNav {
+.mobileMenu {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   background: rgba(26, 26, 26, 0.98);
   backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(247, 127, 0, 0.2);
-  padding: 1rem;
+  border-top: 1px solid var(--color-primary-alpha);
+  padding: var(--spacing-md);
 }
 
-.mobileNavLink {
+.mobileMenu.open {
+  display: block;
+}
+
+.mobileMenuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.mobileMenuLink {
+  display: block;
+  padding: var(--spacing-md);
+  color: var(--text-white);
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
 }
 
-.mobileNavLink:hover {
-  background-color: rgba(247, 127, 0, 0.1);
-  color: #f77f00;
+.mobileMenuLink:hover,
+.mobileMenuLink.active {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  text-decoration: none;
 }
 
-.mobileNavLink.active {
-  background-color: rgba(247, 127, 0, 0.15);
-  color: #f77f00;
-  font-weight: 600;
-}
-
-/* Responsive design */
+/* 响应式设计 */
 @media (max-width: 768px) {
-  .navItems {
+  .menu {
     display: none;
   }
 
   .mobileMenuButton {
-    display: flex;
-  }
-
-  .mobileNav {
     display: block;
   }
 
-  .brandText {
-    display: none;
+  .content {
+    height: 56px;
+  }
+
+  .brand {
+    font-size: var(--font-lg);
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 0.5rem;
+    padding: 0 var(--spacing-sm);
   }
 
-  .brandLink {
-    font-size: 1.1rem;
-  }
-
-  .brandIcon {
-    font-size: 1.25rem;
+  .brand {
+    font-size: var(--font-base);
   }
 }

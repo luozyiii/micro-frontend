@@ -1,16 +1,16 @@
 .home {
-  max-width: 1400px;
+  max-width: var(--breakpoint-xl);
   margin: 0 auto;
 }
 
 .hero {
   text-align: center;
-  padding: 4rem 2rem;
-  background-color: #2d2d2d;
-  border-radius: 12px;
-  color: white;
-  margin-bottom: 4rem;
-  border: 1px solid #404040;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-darker);
+  border-radius: var(--radius-xl);
+  color: var(--text-white);
+  margin-bottom: var(--spacing-3xl);
+  border: 1px solid var(--bg-dark);
 }
 
 .heroContent {
@@ -21,48 +21,46 @@
 }
 
 .heroTitle {
-  font-size: 4rem;
+  font-size: var(--font-4xl);
   font-weight: 900;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 var(--spacing-lg) 0;
   line-height: 1.1;
-  background: linear-gradient(135deg, #f77f00 0%, #ff6b35 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: none;
 }
 
 .heroSubtitle {
-  font-size: 1.5rem;
-  margin: 0 0 3rem 0;
+  font-size: var(--font-2xl);
+  margin: 0 0 var(--spacing-2xl) 0;
   opacity: 0.9;
   line-height: 1.6;
   color: #cccccc;
-  font-weight: 400;
+  font-weight: var(--font-normal);
 }
 
 .heroActions {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: var(--spacing-xl);
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: var(--spacing-md) var(--spacing-xl);
   border: 2px solid transparent;
-  border-radius: 12px;
-  font-size: 1.125rem;
-  font-weight: 600;
+  border-radius: var(--radius-xl);
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  color: white;
+  transition: var(--transition-slow);
+  color: var(--text-white);
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(8px);
@@ -76,12 +74,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -92,17 +85,17 @@
 .button:hover {
   transform: translateY(-3px);
   text-decoration: none;
-  color: white;
+  color: var(--text-white);
 }
 
 .buttonPrimary {
-  background: linear-gradient(135deg, #f77f00 0%, #ff6b35 100%);
-  border-color: #f77f00;
-  box-shadow: 0 10px 25px rgba(247, 127, 0, 0.4);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ff6b35 100%);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 25px var(--color-primary-alpha);
 }
 
 .buttonPrimary:hover {
-  background: linear-gradient(135deg, #e56b00 0%, #ff5722 100%);
+  background: linear-gradient(135deg, var(--color-primary-hover) 0%, #ff5722 100%);
   box-shadow: 0 15px 35px rgba(247, 127, 0, 0.6);
 }
 
@@ -115,150 +108,150 @@
 .buttonSecondary:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-3xl);
+  font-weight: var(--font-bold);
   text-align: center;
-  margin: 0 0 3rem 0;
-  color: #ffffff;
-  background: linear-gradient(135deg, #f77f00 0%, #ff6b35 100%);
+  margin: 0 0 var(--spacing-2xl) 0;
+  color: var(--text-white);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .apps {
-  margin-bottom: 6rem;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .appGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 2rem;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .appCard {
   text-align: center;
-  transition: all 0.2s ease;
-  background-color: #2d2d2d;
-  border-radius: 12px;
-  padding: 2rem;
-  border: 1px solid #404040;
+  transition: var(--transition-base);
+  background-color: var(--bg-darker);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--bg-dark);
 }
 
 .appCard:hover {
-  border-color: #f77f00;
+  border-color: var(--color-primary);
 }
 
 .appIcon {
   font-size: 5rem;
-  margin-bottom: 1.5rem;
-  color: #f77f00;
-  filter: drop-shadow(0 4px 8px rgba(247, 127, 0, 0.4));
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  filter: drop-shadow(0 4px 8px var(--color-primary-alpha));
 }
 
 .appName {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  color: #ffffff;
+  font-size: var(--font-xl);
+  font-weight: var(--font-bold);
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--text-white);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .appDescription {
   color: #cccccc;
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--spacing-xl) 0;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
 }
 
 .features {
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
 }
 
 .featureCard {
   text-align: center;
-  background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e9ecef;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
 }
 
 .featureIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: var(--font-3xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .featureTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
-  color: #333;
+  font-size: var(--font-xl);
+  font-weight: var(--font-semibold);
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--text-dark);
 }
 
 .featureDescription {
-  color: #6c757d;
+  color: var(--text-secondary);
   margin: 0;
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: var(--font-sm);
 }
 
 .tech {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
 }
 
 .techCard {
   text-align: center;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e9ecef;
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
 }
 
 .techList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
 }
 
 .techItem {
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 8px;
+  padding: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
   text-align: left;
   line-height: 1.5;
 }
 
 .techItem strong {
-  color: #495057;
+  color: var(--text-primary);
 }
 
-/* Responsive design */
+/* 响应式设计 */
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1rem;
-    margin-bottom: 3rem;
+    padding: var(--spacing-2xl) var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: var(--font-3xl);
   }
 
   .heroSubtitle {
-    font-size: 1.1rem;
+    font-size: var(--font-lg);
   }
 
   .heroActions {
@@ -266,43 +259,40 @@
     align-items: center;
   }
 
-  .appGrid {
+  .appGrid,
+  .techList {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--spacing-lg);
   }
 
   .featureGrid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-
-  .techList {
-    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 2rem 1rem;
+    padding: var(--spacing-xl) var(--spacing-md);
   }
 
   .heroTitle {
-    font-size: 2rem;
+    font-size: var(--font-2xl);
   }
 
   .heroSubtitle {
-    font-size: 1rem;
+    font-size: var(--font-base);
   }
 
   .sectionTitle {
-    font-size: 1.75rem;
+    font-size: var(--font-2xl);
   }
 
   .appIcon {
-    font-size: 3rem;
+    font-size: var(--font-3xl);
   }
 
   .featureIcon {
-    font-size: 2.5rem;
+    font-size: var(--font-2xl);
   }
 }
