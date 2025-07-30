@@ -118,7 +118,7 @@ pnpm run dev:ui-kit   # UI 组件库
 - 🎨 **UI 组件库**: http://localhost:6006 (Storybook)
 
 #### 在线演示
-- 🌐 **GitHub Pages**: https://your-username.github.io/your-repo-name/
+- 🌐 **GitHub Pages**: https://luozyiii.github.io/micro-frontend/
 
 ## 🚀 部署到 GitHub Pages
 
@@ -128,7 +128,7 @@ pnpm run dev:ui-kit   # UI 组件库
 2. **启用 GitHub Pages**: Settings → Pages → Source: GitHub Actions
 3. **自动部署**: 推送后自动构建和部署
 
-详细说明请查看 [DEPLOY.md](./DEPLOY.md)
+详细说明请查看 [DEPLOY.md](./docs/DEPLOY.md)
 
 ## 🎓 学习重点
 
