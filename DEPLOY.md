@@ -1,4 +1,4 @@
-# 🚀 GitHub Pages 部署指南
+# 🚀 微前端生态平台 - GitHub Pages 部署指南
 
 ## 快速部署
 
@@ -19,7 +19,7 @@ git push origin main
 
 ### 3. 自动部署
 
-推送代码后，GitHub Actions 会自动构建和部署微前端应用。
+推送代码后，GitHub Actions 会自动构建和部署微前端生态平台。
 
 ## 访问地址
 
@@ -41,7 +41,7 @@ pnpm preview
 
 ## 说明
 
-- 部署的是 Shell 主应用，包含完整的微前端演示
+- 部署的是 Shell 主应用，包含完整的微前端生态平台
 - 自动构建 UI Kit 和 Shell 应用
 - 支持响应式设计，适配各种设备
 - 包含计数器和待办事项功能演示

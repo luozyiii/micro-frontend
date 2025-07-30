@@ -89,8 +89,8 @@ jobs:
         # 设置 GitHub Pages 配置
         cd deploy
         touch .nojekyll
-        echo "# 微前端演示平台" > README.md
-        echo "基于 Module Federation 的微前端架构演示" >> README.md
+        echo "# 微前端生态平台" > README.md
+        echo "基于模块联邦的新一代微前端架构生态平台" >> README.md
         # 创建 404.html 用于 SPA 路由重定向
         cp index.html 404.html
 

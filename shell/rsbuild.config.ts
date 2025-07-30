@@ -4,7 +4,6 @@ import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import moduleFederationConfig from './module-federation.config';
 
 const isProduction = process.env.NODE_ENV === 'production';
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 
 export default defineConfig({
   plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
@@ -12,10 +11,10 @@ export default defineConfig({
     port: 3000,
   },
   html: {
-    title: 'Nexus Frontend Hub',
+    title: '微前端生态平台',
     meta: {
-      description: 'A cutting-edge micro-frontend platform powered by Module Federation',
-      keywords: 'micro-frontend,module-federation,react,typescript,nexus',
+      description: '基于模块联邦的新一代微前端架构生态平台',
+      keywords: '微前端,模块联邦,React,TypeScript,生态平台',
     },
   },
   output: {
