@@ -42,6 +42,20 @@ jobs:
         cd ui-kit
         pnpm build
 
+    - name: Build Counter App
+      run: |
+        cd counter
+        pnpm build
+      env:
+        NODE_ENV: production
+
+    - name: Build Todos App
+      run: |
+        cd todos
+        pnpm build
+      env:
+        NODE_ENV: production
+
     - name: Build Shell App
       run: |
         cd shell
@@ -52,7 +66,22 @@ jobs:
 
     - name: Setup GitHub Pages
       run: |
-        cd shell/dist
+        # 创建部署目录结构
+        mkdir -p deploy
+
+        # 复制 shell 应用到根目录
+        cp -r shell/dist/* deploy/
+
+        # 复制 counter 应用到 /counter 子目录
+        mkdir -p deploy/counter
+        cp -r counter/dist/* deploy/counter/
+
+        # 复制 todos 应用到 /todos 子目录
+        mkdir -p deploy/todos
+        cp -r todos/dist/* deploy/todos/
+
+        # 设置 GitHub Pages 配置
+        cd deploy
         touch .nojekyll
         echo "# 微前端演示平台" > README.md
         echo "基于 Module Federation 的微前端架构演示" >> README.md
@@ -62,7 +91,7 @@ jobs:
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./shell/dist
+        path: ./deploy
 
   deploy:
     environment:
