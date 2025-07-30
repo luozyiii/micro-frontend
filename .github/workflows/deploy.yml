@@ -32,7 +32,7 @@ jobs:
         node-version: '18'
 
     - name: Setup pnpm
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@v4
       with:
         version: 8
 
@@ -59,7 +59,7 @@ jobs:
         echo "基于 Module Federation 的微前端架构演示" >> README.md
 
     - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./shell/dist
 
@@ -74,4 +74,4 @@ jobs:
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
