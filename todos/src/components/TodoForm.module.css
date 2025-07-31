@@ -14,22 +14,17 @@
 .input {
   flex: 1;
   min-width: 0;
-  /* 移除可能冲突的样式，让 UI Kit 的 size="sm" 生效 */
+  height: 48px;
 }
 
 .input::placeholder {
   color: #a3a3a3;
 }
 
-/* 移除这些样式，让 UI Kit 处理 focus 和 hover 状态 */
-
 .button {
   flex-shrink: 0;
   min-width: 100px;
-  /* 移除可能冲突的样式，让 UI Kit 的 size="sm" 生效 */
 }
-
-/* 移除这些样式，让 UI Kit 处理按钮状态 */
 
 /* 响应式设计 - 只保留布局相关样式 */
 @media (max-width: 480px) {

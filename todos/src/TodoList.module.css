@@ -49,10 +49,8 @@
 }
 
 .filterButton {
-  /* 移除可能冲突的样式，让 UI Kit 的 size="sm" 生效 */
+  height: 40px;
 }
-
-/* 移除这些样式，让 UI Kit 处理按钮状态 */
 
 .actions {
   display: flex;
@@ -60,10 +58,8 @@
 }
 
 .actionButton {
-  /* 移除可能冲突的样式，让 UI Kit 的 size="sm" 生效 */
+  height: 40px;
 }
-
-/* 移除这些样式，让 UI Kit 处理按钮状态 */
 
 .list {
   min-height: 200px;
